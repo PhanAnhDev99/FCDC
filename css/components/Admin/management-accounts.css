@@ -1,0 +1,10 @@
+@import url('../Button/Button.css');
+@import url('account-search.css');
+@import url('account-table.css');
+
+.management__accounts {
+    width: var(--management-width);
+    font-size: var(--management-fontSize);
+    padding: var(--managementAccounts-padding);
+}
+

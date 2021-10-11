@@ -1,0 +1,23 @@
+@import url('variables-color.css');
+@import url('variables-navigation.css');
+@import url('variables-header.css');
+
+:root {
+
+    /* width: */
+    --width-gutter-col-1-2: 0rem;
+    --management-width: calc(100%- var(--navigation-width));
+
+    /* margin */
+    --managementControlBtn-marginLeft: 3rem;
+    --tableBox-marginTop: 5rem;
+
+    /* padding */
+    --managementAccounts-padding: 2rem 1rem 6rem 10rem;
+    --ctaCell-padding: 1rem 3.5rem;
+    --td-padding: 0 4rem;
+
+    /* font-size */
+    --management-fontSize: 1.8rem;
+    --managementSearchIcon-fontSize: 2.5rem;
+}

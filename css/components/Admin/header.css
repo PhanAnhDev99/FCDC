@@ -1,0 +1,10 @@
+.header{
+    max-height: var(--logo-height);
+    overflow: hidden;
+}
+
+.header__logo{
+    display: inline-block;
+    width: var(--logo-width);
+    height: var(--logo-height);
+}

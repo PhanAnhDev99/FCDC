@@ -1,0 +1,6 @@
+@import url('navigation.css');
+@import url('form-create.css');
+
+.main {
+    border-top: 1px solid var(--black-color);
+}

@@ -1,0 +1,110 @@
+@import url('../../shared/shared.css');
+@import url('../Button/Button.css');
+
+.main {
+    position: relative;
+}
+
+.side {
+    position: absolute;
+    top: 0;
+}
+
+.main-left {
+    left: 0;
+    background-color: var(--lightBlue-color);
+    height: 100vh;
+    width: 50%;
+}
+
+.main-right {
+    width: 50%;
+    height: 100vh;
+    left: 50%;
+}
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+}
+
+.form__title {
+    margin-bottom: 5rem;
+    font-size: var(--heading-secondary);
+}
+
+.form__control {
+    text-align: center;
+    position: relative;
+}
+
+.form__control::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.form__control label,
+.form__control input {
+    display: block;
+    float: left;
+}
+
+.form__control .icon {
+    font-size: var(--fontSize-icon-login);
+    padding: var(--padding-icon-login);
+}
+
+.form__control label {
+    width: var(--width-label-login);
+    border: var(--gray-color) 1px solid;
+    background-color: var(--lightGray-color);
+}
+
+.form__control input {
+    font-size: var(--fontSize-input-login);
+    padding: var(--padding-input-login);
+    border: var(--mediumGray-color) 1px solid;
+    width: var(--width-input-login);
+}
+
+.form__control .placeholder {
+    position: absolute;
+    top: 75%;
+    left: 12%;
+    display: block;
+    width: auto;
+    font-size: var(--fontSize-placeholder-login);
+    color: var(--mediumGray-color);
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(2.2rem);
+    transition: transform 0.5s;
+
+}
+
+.form__control input:focus {
+    border-bottom: 2px solid var(--lightBlue-color);
+}
+
+.form__control input:placeholder-shown+.placeholder {
+    transform: translateY(0);
+    opacity: 0;
+}
+.link{
+    display: inline-block;
+    color: var(--mediumblue-color);
+    font-size: var(--fontSize-link-login);
+}
+
+.redirect__forgotPassword{
+    float: left;
+}
+
+.redirect__register{
+    float: right;
+}

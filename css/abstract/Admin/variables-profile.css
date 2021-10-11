@@ -1,0 +1,20 @@
+@import url('variables-color.css');
+@import url('variables-header.css');
+@import url('variables-navigation.css');
+
+:root {
+    /* margin */
+    --marginLeft-input: 3rem;
+
+    /* padding */
+    --viewProfile-padding: 5rem 10rem;
+
+    /* font-size */
+    --viewProfile-fontSize: 2.5rem;
+
+    /* width */
+    --viewProfile-width: calc(100% - var(--navigation-width));
+    --width-gutter-col-1-2: 0rem;
+    --label-width: 15%;
+    --input-width: calc(100% - (var(--label-width) + var(--marginLeft-input)));
+}

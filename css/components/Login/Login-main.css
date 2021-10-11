@@ -1,0 +1,21 @@
+@import url('Login-form.css');
+
+.main {
+    border-top: 3rem solid var(--easternBlue-color);
+}
+
+.redirect {
+    text-align: right;
+    padding-right: 8rem;
+}
+
+.redirect__forgot--password {
+    font-weight: 700;
+    font-size: var(--fontSize-link-login);
+    color: var(--black-color);
+}
+
+.redirect__forgot--password:hover {
+    color: var(--lightEasternBlue-color);
+    text-decoration: underline;
+}

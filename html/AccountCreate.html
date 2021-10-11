@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/utilities/utilities.css">
+    <link rel="stylesheet" href="../css/components/Admin/Create.css">
+    <title>Create</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo-box">
+            <img src="../assets/images/F-CDC-Logo.png" class="header__logo" />
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-inner row">
+            <div class="main__navigation col">
+                <h3 class="navigation__title heading-tertiary">Quản lý tài khoản</h3>
+                <div class="navigation__menu">
+                    <ul>
+                        <li class="menu__item menu__accounts">
+                            <span class="menu__accounts-title">
+                                Danh sách tài khoản<i class="menu__account-icon fas fa-angle-down"></i>
+                            </span>
+
+                            <ul class="menu__account-types">
+                                <li class="menu__account menu__doctors">
+                                    <a href="AccountList.html">Bác sĩ</a>
+                                </li>
+                                <li class="menu__account menu__staffs">
+                                    <a href="AccountList.html">Nhân viên</a>
+                                </li>
+                                <li class="menu__account menu__patients">
+                                    <a href="AccountList.html">Bệnh nhân</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item menu__create">
+                            <a href="AccountCreate.html">Tạo tài khoản</a>
+                        </li>
+                        <li class="menu__item menu__management-news">
+                            <a href="NewsList.html">Quản lý tin tức</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main__form-create col">
+                <div class="form-create__box">
+                    <h4 class="form-create__title heading-tertiary u-margin-bottom-small">Tạo tài khoản</h4>
+                    <form action="#" class="form-create">
+                        <div class="form-create__control">
+                            <label>Avatar</label>
+                            <div class="control__avatar">
+                                <label for="avatar">
+                                    <i class="control__avatar-icon fas fa-user-circle"></i>
+                                </label>
+                                <input type="file" name="avatar" id="avatar">
+                            </div>
+                        </div>
+                        <div class="form-create__control row">
+                            <div class="side name col">
+                                <label for="first-name">Họ</label>
+                                <input type="text" name="first-name" id="first-name">
+                            </div>
+                            <div class="side name col">
+                                <label for="last-name" class="last-name">Tên</label>
+                                <input type="text" name="last-name" id="last-name">
+                            </div>
+                        </div>
+                        <div class="form-create__control">
+                            <label for="birthday">Ngày Sinh</label>
+                            <input type="date" name="birthday" id="birthday" class="date-input">
+                        </div>
+                        <div class="form-create__control">
+                            <label for="password">Mật khẩu</label>
+                            <input type="password" name="password" id="password">
+                        </div>
+                        <div class="form-create__control">
+                            <label for="phone">Số điện thoại</label>
+                            <input type="text" name="phone" id="phone">
+                        </div>
+                        <div class="form-create__control roles">
+                            <label>Chức vụ</label>
+                            <div class="roles__list">
+                                <ul>
+                                    <li class="roles__item">
+                                        <input type="radio" name="role" id="doctor" value="doctor" checked>
+                                        <label for="doctor" class="roles__item-label">
+                                            <span class="roles__item-radio"></span>Bác sĩ
+                                        </label>
+                                    </li>
+                                    <li class="roles__item">
+                                        <input type="radio" name="role" id="staff" value="staff">
+                                        <label for="staff" class="roles__item-label">
+                                            <span class="roles__item-radio"></span>Nhân viên
+                                        </label>
+                                    </li>
+                                    <li class="roles__item">
+                                        <input type="radio" name="role" id="patient" value="patient">
+                                        <label for="patient" class="roles__item-label">
+                                            <span class="roles__item-radio"></span>Bệnh nhân
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-create__control">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="form-create__control control__change-one row">
+                            <label for="hospital">Bệnh viện</label>
+                            <input type="text" name="hospital" id="hospital">
+                        </div>
+                        <div class="form-create__control control__change-two row">
+                            <label for="hospital-address">Địa chỉ bệnh viện</label>
+                            <input type="text" name="hospital-address" id="hospital-address">
+                        </div>
+                    </form>
+                    <div class="form-create__cta u-margin-top-medium">
+                        <button type="submit" class="btn btn-ocean--blue">Tạo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/Admin/create-form.js"></script>
+    </main>
+</body>
+
+</html>

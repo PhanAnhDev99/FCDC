@@ -1,0 +1,26 @@
+.management__search-box {
+    text-align: right;
+}
+
+.management__search-form {
+    position: relative;
+    display: inline-block;
+}
+
+.management__search {
+    padding: 1.4rem 25.7rem 1.4rem 4rem;
+    background-color: var(--lightGray-color);
+    border-radius: 25px;
+    border: 1px solid var(--black-color);
+}
+
+.management__search-btn {
+    position: absolute;
+    top: 25%;
+    right: 4%;
+    background-color: transparent;
+}
+
+.management__search-icon {
+    font-size: var(--managementSearchIcon-fontSize);
+}

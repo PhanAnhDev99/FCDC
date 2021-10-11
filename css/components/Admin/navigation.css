@@ -1,0 +1,64 @@
+.main__navigation {
+    padding: var(--navigation-padding);
+    background-color: var(--mediumWhite-color);
+    height: var(--navigation-height);
+    width: var(--navigation-width);
+}
+
+.navigation__title {
+    font-size: var(--navigationTitle-fontSize);
+    font-weight: 400;
+}
+
+.navigation__menu {
+    margin-top: var(--navigationMenu-marginTop);
+}
+
+.menu__item {
+    font-size: var(--menuItem-fontSize);
+}
+
+.menu__item a{
+    color: var(--black-color);
+}
+
+.menu__item a:hover{
+    color: var(--oceanBlue-color);
+}
+
+.menu__account,
+.navigation__menu .menu__item:not(:first-child) {
+    cursor: pointer;
+}
+
+.menu__accounts-title {
+    color: var(--oceanBlue-color);
+    cursor: pointer;
+}
+
+.menu__account-icon {
+    color: var(--mediumGray-color);
+    font-size: var(--menuAccountIcon-fontSize);
+    display: inline-block;
+    margin-left: var(--menuAccountIcon-marginLeft);
+}
+
+.menu__account {
+    font-size: var(--menuAccountItem-fontSize);
+}
+
+.menu__item {
+    margin-top: var(--menuItem-marginTop);
+}
+
+.menu__account-types {
+    padding: var(--menuAccountTypes-padding);
+}
+
+.menu__account-types .menu__account:first-child {
+    margin-top: 0;
+}
+
+.menu__account {
+    margin-top: var(--menuItem-marginTop);
+}

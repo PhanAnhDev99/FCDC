@@ -1,0 +1,29 @@
+.header-login {
+    display: table;
+}
+
+.header__logo-box{
+    position: relative;
+    width: var(--width-logo-login);
+    height: var(--width-logo-login);
+}
+
+.header__logo {
+    display: inline-block;
+    width: var(--width-logo-login);
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.header-login .side {
+    display: table-cell;
+}
+
+.header__logo-text--box {
+    vertical-align: middle;
+}
+
+.heading-primary {
+    font-size: var(--heading-primary);
+}

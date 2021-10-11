@@ -1,0 +1,17 @@
+.management__table-footer::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.management__pagination {
+    float: left;
+}
+
+.management__cta {
+    float: right;
+}
+
+.management__cta .btn{
+    margin-right: var(--managementControlBtn-marginLeft);
+}

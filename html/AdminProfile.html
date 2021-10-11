@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/utilities/utilities.css">
+    <link rel="stylesheet" href="../css/components/Admin/Profile.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo-box">
+            <img src="../assets/images/F-CDC-Logo.png" class="header__logo" />
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-inner row">
+            <div class="main__navigation col">
+                <h3 class="navigation__title heading-tertiary">Quản lý tài khoản</h3>
+                <div class="navigation__menu">
+                    <ul>
+                        <li class="menu__item menu__accounts">
+                            <span class="menu__accounts-title">
+                                Danh sách tài khoản<i class="menu__account-icon fas fa-angle-down"></i>
+                            </span>
+
+                            <ul class="menu__account-types">
+                                <li class="menu__account menu__doctors">
+                                    <a href="AccountList.html">Bác sĩ</a>
+                                </li>
+                                <li class="menu__account menu__staffs">
+                                    <a href="AccountList.html">Nhân viên</a>
+                                </li>
+                                <li class="menu__account menu__patients">
+                                    <a href="AccountList.html">Bệnh nhân</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item menu__create">
+                            <a href="AccountCreate.html">Tạo tài khoản</a>
+                        </li>
+                        <li class="menu__item menu__management-news">
+                            <a href="NewsList.html">Quản lý tin tức</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main__profile col">
+                <div>
+                    <h5 class="profile__title heading-fifth">Thông tin tài khoản</h5>
+                </div>
+                <div class="profile__form u-margin-top-medium">
+                    <form action="#">
+                        <div class="profile__form-introduction">
+                            <div class="profile__background"></div>
+                            <div class="profile__avatar">
+                                <div class="profile__avatar-image u-margin-bottom-small">
+                                    <label for="avatar-image" class="avatar-image__box">
+                                        <img src="../assets/icons/others/account-circle.jpeg" class="avatar-image">
+                                    </label>
+                                    <input type="file" name="avatar-image" id="avatar-image" class="avatar-input">
+                                </div>
+                                <span class="profile__avatar-name">Phạm Văn Khánh</span>
+                            </div>
+                        </div>
+                        <div class="profile__form-information u-margin-top-medium">
+                            <div class="profile__form-control">
+                                <label for="full-name">Họ và Tên:</label>
+                                <input type="text" name="full-name" id="full-name" value="Phạm Văn Khánh">
+                            </div>
+                            <div class="profile__form-control">
+                                <label for="sex">Nam:</label>
+                                <input type="text" name="sex" id="sex" value="Nam">
+                            </div>
+                            <div class="profile__form-control">
+                                <label for="birthday">Ngày Sinh:</label>
+                                <input type="text" name="birthday" id="birthday" placeholder="14/11/1999"
+                                    onfocus="(this.type='date')" onblur="(this.type='text')" class="date-input">
+                            </div>
+                            <div class="profile__form-control">
+                                <label for="apartment-number">Số nhà:</label>
+                                <input type="text" name="apartment-number" id="apartment-number"
+                                    value="Số nhà 32 - Đường Mộc Hoàn Đình">
+                            </div>
+                            <div class="profile__form-control">
+                                <label for="sub-district">Phường:</label>
+                                <input type="text" name="sub-district" id="sub-district" value="Vân Côn">
+                            </div>
+                            <div class="profile__form-control">
+                                <label for="town">Huyện:</label>
+                                <input type="text" name="town" id="town" value="Hoài Đức">
+                            </div>
+                            <div class="profile__form-control">
+                                <label for="city">Thành phố:</label>
+                                <input type="text" name="city" id="city" value="Hà Nội">
+                            </div>
+                            <div class="profile__form-control">
+                                <label for="email">Điện thoại:</label>
+                                <input type="text" name="email" id="email" value="khanhpham141199@gmail.com:">
+                            </div>
+                            <div class="profile__form-control">
+                                <label for="phone">Điện thoại:</label>
+                                <input type="text" name="phone" id="phone" value="0966274390">
+                            </div>
+                        </div>
+                        <div class="form__edit-cta u-margin-top-medium">
+                            <button type="submit" class="btn btn-ocean--blue">Chỉnh sửa</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

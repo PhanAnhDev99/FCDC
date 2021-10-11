@@ -1,0 +1,73 @@
+@import url('../Button/Button.css');
+
+.form fieldset {
+    padding-bottom: var(--padding-bottom-fieldset);
+
+}
+
+.form__title {
+    padding: 1.2rem 5.5rem;
+    font-size: var(--fontSize-legend-login);
+    background-color: var(--lightEasternBlue-color);
+    border: 1px solid var(--mediumEasternBlue-color);
+    color: var(--white-color);
+}
+
+.form__control {
+    position: relative;
+    width: var(--width-formControl-login);
+    display: table;
+    margin: 0 auto;
+}
+
+.form__control::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.form__control label,
+.form__control input {
+    display: table-cell;
+}
+
+.form__control .icon {
+    font-size: var(--fontSize-icon-login);
+    padding: var(--padding-icon-login);
+}
+
+.form__control label {
+    width: var(--width-label-login);
+    border: var(--gray-color) 1px solid;
+    background-color: var(--lightGray-color);
+}
+
+.form__control input {
+    font-size: var(--fontSize-input-login);
+    padding: var(--padding-input-login);
+    border: var(--mediumGray-color) 1px solid;
+    width: var(--width-input-login);
+}
+
+.form__control .placeholder {
+    position: absolute;
+    top: 75%;
+    left: 12%;
+    display: block;
+    font-size: var(--fontSize-placeholder-login);
+    color: var(--mediumGray-color);
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(2.2rem);
+    transition: transform 0.5s;
+
+}
+
+.form__control input:focus {
+    border-bottom: 2px solid var(--lightBlue-color);
+}
+
+.form__control input:placeholder-shown+.placeholder {
+    transform: translateY(0);
+    opacity: 0;
+}

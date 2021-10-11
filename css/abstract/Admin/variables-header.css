@@ -1,0 +1,5 @@
+:root{
+    --logo-width: 22.2rem;
+    --logo-height: 23vh;
+    --height-header: calc(var(--logo-height) + 0.5vh);
+}
