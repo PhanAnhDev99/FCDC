@@ -1,9 +1,0 @@
-@import url('../../shared/shared.css');
-@import url('../../abstract/Admin/variables-login.css');
-@import url('Login-header.css');
-@import url('Login-main.css');
-@import url('Login-form.css');
-
-body {
-    padding: 0 25rem;
-}
