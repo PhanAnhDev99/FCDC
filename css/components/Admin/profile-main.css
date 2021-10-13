@@ -1,7 +1,0 @@
-@import url('../Admin/navigation.css');
-@import url('../Admin/view-profile.css');
-
-.main {
-    border-top: 1px solid var(--black-color);
-
-}
