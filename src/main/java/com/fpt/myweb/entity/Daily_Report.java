@@ -13,6 +13,7 @@ import java.util.Date;
 @Getter
 @Setter
 public class Daily_Report extends BaseEntity{
+
     @Column(name = "comment")
     private String comment;
     @Column(name = "dateTime")

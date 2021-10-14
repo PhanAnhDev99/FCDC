@@ -14,6 +14,7 @@ import java.util.List;
 @Getter
 @Setter
 public class Village extends BaseEntity{
+
     @Column(name = "name")
     private String name;
     @ManyToOne

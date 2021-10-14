@@ -14,8 +14,10 @@ import java.util.List;
 @Getter
 @Setter
 public class Province extends BaseEntity{
+
     @Column(name = "name")
     private String name;
+
     @OneToMany(mappedBy = "province")
     private List<District> districts = new ArrayList<>();
 
