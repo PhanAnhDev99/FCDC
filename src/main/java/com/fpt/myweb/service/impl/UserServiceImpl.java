@@ -40,24 +40,14 @@ public class UserServiceImpl implements UserService {
             userRequets.add(userConvert.convertToUserRequest(user));
         }
         return userRequets;
-
     }
 
     @Override
     public UserRequet getUser(long id) {
         User user = userRepository.findById(id).orElseThrow(() -> new Dup("Not found ID = " + id));
-        UserRequet userRequet = new UserRequet();
+        UserRequet userRequet = userConvert.convertToUserRequest(user);
 
-        userRequet.setUsername(user.getUsername());
-        userRequet.setPassword(user.getPassword());
-        userRequet.setFirstname(user.getFirstname());
-        userRequet.setLastname((user.getLastname()));
-        userRequet.setEmail(user.getEmail());
-        userRequet.setPhone(user.getPhone());
-        userRequet.setAddress(user.getAddress());
-        userRequet.setBirthOfdate(user.getBirthOfdate());
-        userRequet.setRole_id(user.getRoles().getId());
-        userRequet.setVillage_id(user.getVillage().getId());
+
         return userRequet;
     }
 
@@ -85,6 +75,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserRequet edit(long id, UserRequet userRequet) {
         User user1 = userRepository.findById(id).orElseThrow(() -> new Dup("Not found ID = " + id));
+        Role role = roleRepository.findById(userRequet.getRole_id()).orElseThrow(() -> new Dup("Not found role ID = " + userRequet.getRole_id()));
+        Village village = villageRepository.findById(userRequet.getVillage_id()).orElseThrow(() -> new Dup("Not village ID = " + userRequet.getVillage_id()));
         user1.setUsername(userRequet.getUsername());
         user1.setPassword(userRequet.getPassword());
         user1.setFirstname(userRequet.getFirstname());
@@ -93,8 +85,8 @@ public class UserServiceImpl implements UserService {
         user1.setAddress(userRequet.getAddress());
         user1.setBirthOfdate(userRequet.getBirthOfdate());
         user1.setEmail(userRequet.getEmail());
-        //userRepository.save(user1);
-        // trong truong hop nay  client ko update role voiws village
+        user1.setRoles(role);
+        user1.setVillage(village);
         UserRequet userRequet1 = userConvert.convertToUserRequest(userRepository.save(user1));
         return userRequet1;
     }

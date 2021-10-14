@@ -26,6 +26,7 @@ public class UserController {
     @PostMapping("/add")
     public ResponseEntity<UserRequet> addUsers(@RequestBody UserRequet userRequet) {
         UserRequet userRequet1 = userService.addUser(userRequet);
+
         return new ResponseEntity<UserRequet>(userRequet1, HttpStatus.OK);
     }
 
