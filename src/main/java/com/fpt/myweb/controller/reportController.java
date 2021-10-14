@@ -29,12 +29,15 @@ public class reportController {
         daily_report.setDateTime(report.getDateReport());
         daily_reportRepository.save(daily_report);
 
-        for(int i = 0; i< report.getListSysptomId().size();i++){
+        for(int i = 0; i< report.getListSysptomId().size() || i < report.getListMedicineId().size() || i < report.getListExerciseId().size();i++){
             Sysptom_Daily_Detail sysptom_daily_detail = new Sysptom_Daily_Detail();
-            sysptom_daily_detailRepository.add(sysptom_daily_detail.getId(),daily_report.getId(),report.getListSysptomId().get(i));
+            sysptom_daily_detailRepository.addSysptom(sysptom_daily_detail.getId(),daily_report.getId(),report.getListSysptomId().get(i));
+            sysptom_daily_detailRepository.addMedicine(sysptom_daily_detail.getId(),daily_report.getId(),report.getListMedicineId().get(i));
+            sysptom_daily_detailRepository.addExercise(sysptom_daily_detail.getId(),daily_report.getId(),report.getListExerciseId().get(i));
         }
         return ResponseEntity.ok(daily_report);
 
     }
+
 
 }
