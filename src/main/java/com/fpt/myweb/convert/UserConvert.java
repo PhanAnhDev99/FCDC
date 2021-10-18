@@ -1,9 +1,7 @@
 package com.fpt.myweb.convert;
 
-import com.fpt.myweb.dto.UserRequet;
-import com.fpt.myweb.entity.Role;
+import com.fpt.myweb.dto.request.UserRequet;
 import com.fpt.myweb.entity.User;
-import com.fpt.myweb.entity.Village;
 import org.springframework.stereotype.Component;
 
 @Component
