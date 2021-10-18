@@ -22,4 +22,7 @@ public interface Sysptom_Daily_DetailRepository extends JpaRepository<Sysptom_Da
     @Transactional
     @Query(value = "INSERT INTO `fcdc_duannd`.`exercise_daily_detail` (`id`, `daily_report_id`, `exercise_id`) VALUES (?1, ?2, ?3);",nativeQuery = true)
     void addExercise(Long id,Long daily_report_id,Long exercise_id);
+
+
+
 }

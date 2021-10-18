@@ -4,14 +4,15 @@ import com.fpt.myweb.dto.Report;
 import com.fpt.myweb.entity.Daily_Report;
 import com.fpt.myweb.entity.Sysptom_Daily_Detail;
 import com.fpt.myweb.entity.User;
+import com.fpt.myweb.exception.Dup;
 import com.fpt.myweb.repository.Daily_ReportRepository;
 import com.fpt.myweb.repository.Sysptom_Daily_DetailRepository;
 import com.fpt.myweb.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class reportController {
@@ -21,6 +22,9 @@ public class reportController {
     private Sysptom_Daily_DetailRepository sysptom_daily_detailRepository;
     @Autowired
     private UserRepository userRepository;
+
+
+
     @PostMapping(value = "/addReport")
     public ResponseEntity<?> addReport(@RequestBody Report report){
         Daily_Report daily_report = new Daily_Report();
@@ -38,6 +42,5 @@ public class reportController {
         return ResponseEntity.ok(daily_report);
 
     }
-
 
 }
