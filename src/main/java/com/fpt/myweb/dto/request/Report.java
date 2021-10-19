@@ -1,4 +1,4 @@
-package com.fpt.myweb.dto;
+package com.fpt.myweb.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
@@ -17,6 +17,6 @@ public class Report {
     private Long userId;
     private Date dateReport;
     private List<Long> listSysptomId;
-    private List<Long> listMedicineId;
-    private List<Long> listExerciseId;
+   /* private List<Long> listMedicineId;
+    private List<Long> listExerciseId;*/
 }

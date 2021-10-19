@@ -1,4 +1,4 @@
-package com.fpt.myweb.dto;
+package com.fpt.myweb.dto.request;
 
 import com.fpt.myweb.entity.Role;
 import com.fpt.myweb.entity.Village;

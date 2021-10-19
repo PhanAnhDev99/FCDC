@@ -10,10 +10,11 @@ import javax.transaction.Transactional;
 
 @Repository
 public interface Sysptom_Daily_DetailRepository extends JpaRepository<Sysptom_Daily_Detail,Long> {
+    /*
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO `fcdc_duannd`.`sysptom_daily_detail` (`id`, `daily_report_id`, `sysptom_id`) VALUES (?1, ?2, ?3);",nativeQuery = true)
-    void addSysptom(Long id,Long daily_report_id,Long sysptom_id);
+    @Query(value = "INSERT INTO `fcdc2`.`sysptom_daily_detail` ( `daily_report_id`, `sysptom_id`) VALUES (?1, ?2);",nativeQuery = true)
+    void addSysptom(Long daily_report_id,Long sysptom_id);
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO `fcdc_duannd`.`medicine_daily_detail` (`id`, `daily_report_id`, `medicine_id`) VALUES (?1, ?2, ?3);",nativeQuery = true)
@@ -21,8 +22,5 @@ public interface Sysptom_Daily_DetailRepository extends JpaRepository<Sysptom_Da
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO `fcdc_duannd`.`exercise_daily_detail` (`id`, `daily_report_id`, `exercise_id`) VALUES (?1, ?2, ?3);",nativeQuery = true)
-    void addExercise(Long id,Long daily_report_id,Long exercise_id);
-
-
-
+    void addExercise(Long id,Long daily_report_id,Long exercise_id);*/
 }

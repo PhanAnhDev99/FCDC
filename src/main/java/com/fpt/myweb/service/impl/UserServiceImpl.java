@@ -4,7 +4,7 @@ package com.fpt.myweb.service.impl;
 
 
 import com.fpt.myweb.convert.UserConvert;
-import com.fpt.myweb.dto.UserRequet;
+import com.fpt.myweb.dto.request.UserRequet;
 import com.fpt.myweb.entity.Role;
 import com.fpt.myweb.entity.User;
 import com.fpt.myweb.entity.Village;
@@ -89,6 +89,28 @@ public class UserServiceImpl implements UserService {
         user1.setVillage(village);
         UserRequet userRequet1 = userConvert.convertToUserRequest(userRepository.save(user1));
         return userRequet1;
+    }
+
+    @Override
+    public List<UserRequet> searchByRole( long role_id) {
+        Role role = roleRepository.findById(role_id).orElseThrow(() -> new Dup("Not found role ID = " + role_id));
+        List<User> searchList = userRepository.findByRoles(role);
+        List<UserRequet> userRequets = new ArrayList<>();
+        for (User user:searchList){
+            userRequets.add(userConvert.convertToUserRequest(user));
+        }
+        return userRequets;
+    }
+
+    @Override
+    public List<UserRequet> searchByTesxt(String text) {
+        List<User> searchList = userRepository.findByUsernameContaining(text);
+        List<UserRequet> userRequets = new ArrayList<>();
+        for (User user:searchList){
+            userRequets.add(userConvert.convertToUserRequest(user));
+        }
+        return userRequets;
+
     }
 
 
