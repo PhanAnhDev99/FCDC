@@ -13,10 +13,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Report {
-
     private Long userId;
     private Date dateReport;
     private List<Long> listSysptomId;
-   /* private List<Long> listMedicineId;
-    private List<Long> listExerciseId;*/
+    private List<Long> listMedicineId;
+    private List<Long> listExerciseId;
 }
