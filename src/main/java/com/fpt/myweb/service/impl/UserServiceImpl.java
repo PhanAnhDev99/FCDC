@@ -46,8 +46,6 @@ public class UserServiceImpl implements UserService {
     public UserRequet getUser(long id) {
         User user = userRepository.findById(id).orElseThrow(() -> new Dup("Not found ID = " + id));
         UserRequet userRequet = userConvert.convertToUserRequest(user);
-
-
         return userRequet;
     }
 

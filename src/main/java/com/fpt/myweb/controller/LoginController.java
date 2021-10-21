@@ -21,7 +21,7 @@ public class LoginController {
     public ResponseEntity<?> checkLogin(@RequestBody LoginRequest loginRequest) {
         User user = userRepository.findByUsernameAndPassword(loginRequest.getUsername(),loginRequest.getPassword());
         if(user==null){
-            return new ResponseEntity<Mes>(new Mes("ko chộ"),HttpStatus.OK);
+            return new ResponseEntity<Mes>(new Mes("Not Found"),HttpStatus.OK);
         }
         LoginResponse loginResponse = new LoginResponse();
         loginResponse.setUsername(user.getUsername());
