@@ -27,7 +27,6 @@ public class Hospital extends BaseEntity{
     private String address;
 
 
-    @OneToMany(mappedBy = "hospital")
-    private List<Medical_Doctor> medical_doctors = new ArrayList<>();
+
 
 }

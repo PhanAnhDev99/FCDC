@@ -16,7 +16,7 @@ public interface UserService {
     public UserRequet edit(long id , UserRequet userRequet);
     // search
     public List<UserRequet> searchByRole(long role_id);
-    public List<UserRequet> searchByTesxt(String text);
+    public List<UserRequet> searchByName(String textName);
 
 
 

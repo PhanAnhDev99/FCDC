@@ -75,16 +75,14 @@ public class UserServiceImpl implements UserService {
         User user1 = userRepository.findById(id).orElseThrow(() -> new Dup("Not found ID = " + id));
         Role role = roleRepository.findById(userRequet.getRole_id()).orElseThrow(() -> new Dup("Not found role ID = " + userRequet.getRole_id()));
         Village village = villageRepository.findById(userRequet.getVillage_id()).orElseThrow(() -> new Dup("Not village ID = " + userRequet.getVillage_id()));
-        user1.setUsername(userRequet.getUsername());
+        user1.setName(userRequet.getName());
         user1.setPassword(userRequet.getPassword());
-        user1.setFirstname(userRequet.getFirstname());
-        user1.setLastname(userRequet.getLastname());
         user1.setPhone(userRequet.getPhone());
         user1.setAddress(userRequet.getAddress());
         user1.setBirthOfdate(userRequet.getBirthOfdate());
         user1.setEmail(userRequet.getEmail());
         user1.setRoles(role);
-        user1.setVillage(village);
+        //user1.setVillage(village);
         UserRequet userRequet1 = userConvert.convertToUserRequest(userRepository.save(user1));
         return userRequet1;
     }
@@ -101,15 +99,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserRequet> searchByTesxt(String text) {
-        List<User> searchList = userRepository.findByUsernameContaining(text);
+    public List<UserRequet> searchByName(String textName) {
+        List<User> searchList = userRepository.findByNameContaining(textName);
         List<UserRequet> userRequets = new ArrayList<>();
         for (User user:searchList){
             userRequets.add(userConvert.convertToUserRequest(user));
         }
         return userRequets;
-
     }
+
 
 
 }

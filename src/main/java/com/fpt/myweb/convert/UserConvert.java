@@ -6,25 +6,25 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class UserConvert {
-    public User convertToUser(UserRequet userRequet){
+    public User convertToUser(UserRequet userRequet) {
         User user = new User();
-        user.setUsername(userRequet.getUsername());
+        user.setName(userRequet.getName());
         user.setPassword(userRequet.getPassword());
-        user.setFirstname(userRequet.getFirstname());
-        user.setLastname((userRequet.getLastname()));
+        user.setGender(userRequet.getGender());
+        user.setStartOfdatedate(userRequet.getStartOfDate());
         user.setEmail(userRequet.getEmail());
         user.setPhone(userRequet.getPhone());
         user.setAddress(userRequet.getAddress());
         user.setBirthOfdate(userRequet.getBirthOfdate());
-
-       return user;
+        return user;
     }
-    public UserRequet convertToUserRequest(User user){
+
+    public UserRequet convertToUserRequest(User user) {
         UserRequet userRequet = new UserRequet();
-        userRequet.setUsername(user.getUsername());
+        userRequet.setName(user.getName());
         userRequet.setPassword(user.getPassword());
-        userRequet.setFirstname(user.getFirstname());
-        userRequet.setLastname((user.getLastname()));
+        userRequet.setGender(user.getGender());
+        userRequet.setStartOfDate(user.getStartOfdatedate());
         userRequet.setEmail(user.getEmail());
         userRequet.setPhone(user.getPhone());
         userRequet.setAddress(user.getAddress());

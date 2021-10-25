@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import java.util.Date;
 import java.util.List;
 @Setter
@@ -18,4 +19,9 @@ public class Report {
     private List<Long> listSysptomId;
     private List<Long> listMedicineId;
     private List<Long> listExerciseId;
+    private Float temperature;
+    private Float spo2;
+
+
+
 }

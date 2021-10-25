@@ -1,15 +1,10 @@
 package com.fpt.myweb.dto.request;
 
-import com.fpt.myweb.entity.Role;
-import com.fpt.myweb.entity.Village;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,26 +12,19 @@ import java.util.Date;
 @Getter
 public class UserRequet {
 
-    private String username;
-
+    private String name;
 
     private String password;
 
+    private String gender;
 
-    private String firstname;
-
-
-    private String lastname;
-
+    private Date startOfDate;
 
     private String email;
 
-
     private String phone;
 
-
     private String address;
-
 
     private Date birthOfdate;
 

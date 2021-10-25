@@ -14,11 +14,18 @@ import java.util.Date;
 @Setter
 public class Daily_Report extends BaseEntity{
 
-    @Column(name = "comment")
-    private String comment;
+    @Column(name = "note")
+    private String note;
     @Column(name = "dateTime")
     private Date dateTime;
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+    @Column(name = "temperature")
+    private Float temperature;
+    @Column(name = "spo2")
+    private Float spo2;
+    @Column(name = "status")
+    private String status;
+
 }

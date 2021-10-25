@@ -5,7 +5,6 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
 @Entity
 @Table(name = "Village")
 @Data
@@ -13,16 +12,12 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Village extends BaseEntity{
-
+public class Village extends BaseEntity {
     @Column(name = "name")
     private String name;
     @ManyToOne
     @JoinColumn(name = "district_id")
     private District district;
     @OneToMany(mappedBy = "village")
-    private List<Medical_Clinic> medical_clinics = new ArrayList<>();
-    @OneToMany(mappedBy = "village")
     private List<User> users = new ArrayList<>();
-
 }

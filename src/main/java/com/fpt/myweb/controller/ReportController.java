@@ -33,6 +33,9 @@ public class ReportController {
         User user = userRepository.findById(report.getUserId()).orElse(null);
         daily_report.setUser(user);
         daily_report.setDateTime(report.getDateReport());
+        daily_report.setStatus("not");
+        daily_report.setTemperature(report.getTemperature());
+        daily_report.setSpo2(report.getSpo2());
         daily_reportRepository.save(daily_report);
 
 
